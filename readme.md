@@ -30,7 +30,9 @@ $dbnames = @(
 "db4")
 ```
 
-2. When the above script run completes, you can edit the 02-SQLDbInstaller.ps1 script and execute. The `DBDict` parameter defines the sequence and the names of the database to execute on the target server. You can merge all databases into one by specifying 1 target for all source databases
+2. Create the empty databases on the Target Server once the above script run completes.
+
+3. Edit the 02-SQLDbInstaller.ps1 script and execute. The `DBDict` parameter defines the sequence and the names of the database to execute on the target server. You can merge all databases into one by specifying 1 target for all source databases
 ```
 $TargetServer = "<sqldbserver>"
 $DBUsername = "<sqlusername>"
