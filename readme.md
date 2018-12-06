@@ -5,21 +5,21 @@ This utility extends the functionality of the SQL Generate Scripts task. You wil
 
 With this utility, you can create scripts of all objects in seperate files and with the output a CSV file is generated which defines the sequence of the objects to be executed on the target server.
 
-There can be multiple benefits of this approach:
+## There can be multiple benefits of this approach :-
 
-SQL Server Source Control
+### SQL Server Source Control
 If on every release you snapshot the golden/vanilla database with the Sql Database Scripter utility and check-in the generated output files into any source control like SVN, TFS etc, you can achieve SQL Database Source Code easily.
 
-Move Databases to a new DB Server
+### Move Databases to a new DB Server
 You can script the databases on the source server and then execute the scripts on a new target server. You can also change the database names during this process
 
-Merge Multiple Databases
+### Merge Multiple Databases
 You can script out the databases into source files and then on the target server give the same target database name for all source databases
 
-Usage
+## Usage
 1. Edit the 01-SQLDbScripter.ps1 script parameters and run in powershell
 the dbnames parameter defines the sequence and the names of the databases to script on the source server
-
+```
 $SourceServer = "<sqldbserver>"
 $DBUsername = "<sqlusername>"
 $DBPassword = "<sqlpassword>"
@@ -29,10 +29,12 @@ $dbnames = @(
 "db2", 
 "db3", 
 "db4")
+```
 
 2. When the above script run completes, you can edit the 02-SQLDbInstaller.ps1 script and execute
 the DBDict parameter defines the sequence and the names of the database to execute on the target server
 you can merge all databases into one by specifying 1 target for all source databases
+```
 $TargetServer = "<sqldbserver>"
 $DBUsername = "<sqlusername>"
 $DBPassword = "<sqlpassword>"
@@ -43,5 +45,6 @@ $DBDict = [ordered]@{
 "db3"="merged_db"; # multiple source databases are merged into target database
 "db4"="merged_db"; # multiple source databases are merged into target database
 }
+```
 
 I hope this script helps you, you comments are welcome and appreciated if you find this script useful
