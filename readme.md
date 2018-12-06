@@ -10,7 +10,7 @@ With this utility, you can create scripts of all objects in seperate files and w
 - ### SQL Server Source Control
   - If on every release you snapshot the golden/vanilla database with the Sql Database Scripter utility and check-in the generated output files into any source control like SVN, TFS etc, you can achieve SQL Database Source Code easily.
 
-- ### Move Databases to a new DB Server
+- ### Move Databases to a new DB Server across or on same network
   - You can script the databases on the source server and then execute the scripts on a new target server. You can also change the database names during this process
 
 - ### Merge Multiple Databases
