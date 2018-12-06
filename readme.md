@@ -44,4 +44,4 @@ $DBDict = [ordered]@{
 }
 ```
 
-I hope this script helps you, you comments are welcome and appreciated if you find this script useful
+I hope you find this script useful. Any comments and suggestions are welcome and appreciated!
