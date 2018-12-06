@@ -17,8 +17,7 @@ With this utility, you can create scripts of all objects in seperate files and w
   - You can script out the databases into source files and then on the target server give the same target database name for all source databases
 
 ## Usage
-1. Edit the 01-SQLDbScripter.ps1 script parameters and run in powershell
-the dbnames parameter defines the sequence and the names of the databases to script on the source server
+1. Edit the 01-SQLDbScripter.ps1 script parameters and run in powershell. The `dbnames` parameter defines the sequence and the names of the databases to script on the source server
 ```
 $SourceServer = "<sqldbserver>"
 $DBUsername = "<sqlusername>"
@@ -31,9 +30,7 @@ $dbnames = @(
 "db4")
 ```
 
-2. When the above script run completes, you can edit the 02-SQLDbInstaller.ps1 script and execute
-the DBDict parameter defines the sequence and the names of the database to execute on the target server
-you can merge all databases into one by specifying 1 target for all source databases
+2. When the above script run completes, you can edit the 02-SQLDbInstaller.ps1 script and execute. The `DBDict` parameter defines the sequence and the names of the database to execute on the target server. You can merge all databases into one by specifying 1 target for all source databases
 ```
 $TargetServer = "<sqldbserver>"
 $DBUsername = "<sqlusername>"
