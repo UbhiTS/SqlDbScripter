@@ -8,13 +8,13 @@ With this utility, you can create scripts of all objects in seperate files and w
 ## There can be multiple benefits of this approach :-
 
 - ### SQL Server Source Control
-If on every release you snapshot the golden/vanilla database with the Sql Database Scripter utility and check-in the generated output files into any source control like SVN, TFS etc, you can achieve SQL Database Source Code easily.
+  - If on every release you snapshot the golden/vanilla database with the Sql Database Scripter utility and check-in the generated output files into any source control like SVN, TFS etc, you can achieve SQL Database Source Code easily.
 
 - ### Move Databases to a new DB Server
-You can script the databases on the source server and then execute the scripts on a new target server. You can also change the database names during this process
+  - You can script the databases on the source server and then execute the scripts on a new target server. You can also change the database names during this process
 
 - ### Merge Multiple Databases
-You can script out the databases into source files and then on the target server give the same target database name for all source databases
+  - You can script out the databases into source files and then on the target server give the same target database name for all source databases
 
 ## Usage
 1. Edit the 01-SQLDbScripter.ps1 script parameters and run in powershell
