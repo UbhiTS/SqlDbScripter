@@ -1,9 +1,9 @@
 # Sql Database Scripter
-Easily script a SQL Server Database (objects and data) and recreate them with the correct sequence and dependencies of objects on the same or different server
+Easily script a SQL Server Database (objects and data) and recreate them with the correct sequence and dependencies of objects on the same or different server. Each SQL Object will be output into it's own file, and on the target server, the Files will be executed in order so that all your foreign keys, data, indexes etc. will recreate wihout issues. You even have the option of merging multiple databases in a single database with this utility.
 
 This utility extends the functionality of the SQL Generate Scripts task. You will notice that if you generate the scripts and output to a single file, you can execute on the target server and everything will execute well and without warnings or errors. However, if you output to multiple files, you have to make sure that you execute the files in the correct sequence or you may get errors and warnings.
 
-With this utility, you can create scripts of all objects in seperate files and with the output a CSV file is generated which defines the sequence of the objects to be executed on the target server.
+With this utility, you can create scripts of all objects in separate files, and with the output, you get a CSV file in which the sequence of the objects to be executed on the target server is defined.
 
 ## There can be multiple benefits of this approach :-
 
